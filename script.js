@@ -17,3 +17,20 @@ let setData = (item) => {
 		localStorage.setItem('mytodo', data);
 	}
 }
+
+let getData = (item = null) => {
+	let data = JSON.parse(localStorage.getItem('mytodo'));
+	if (data){
+
+		if(item) {
+			if(data.indexOf(item) != -1) {
+				return data[item];
+			} else {
+				return false;
+			}
+		}
+		return data;
+	}
+	return false;
+}
+
