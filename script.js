@@ -34,3 +34,15 @@ let getData = (item = null) => {
 	return false;
 }
 
+let listTodo = () => {
+	let html = '';
+	let data = getData(); // getting item from local storage
+	if (data) {
+		html += '<ol>';
+		data.forEach((value, item) => {
+			html += `<li>${value} &nbsp;&nbsp;&nbsp;<button onclick="removeData(${item})">Remove</button></li>`;
+		});
+		html += '</ol>';
+	}
+	document.getElementById('todo-item').innerHTML = html;
+}
