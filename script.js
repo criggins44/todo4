@@ -46,3 +46,17 @@ let listTodo = () => {
 	}
 	document.getElementById('todo-item').innerHTML = html;
 }
+
+let removeData() = (itemId) => {
+	let data = getData();
+	if (data){
+		let newData = data.filter((v,i) => {return i != itemId});
+		newData = JSON.stringify(newData);
+		localStorage.setItem('mytodo',newData);
+		listTodo();
+	} else {
+		alert("no data found");
+	}
+}
+
+
