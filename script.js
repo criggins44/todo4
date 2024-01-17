@@ -15,3 +15,12 @@ function addTodo(){
 	listItems();
 	inputBox.value ="";
 }
+
+function deleteItem(index){
+	items.splice(index, 1);
+	localStorage.setItems("todo-list", JSON.stringify(items));
+	listItems();
+}
+
+
+
