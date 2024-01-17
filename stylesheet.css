@@ -1,1 +1,16 @@
-stylesheet
+h1 {
+	padding-top: 1rem;
+	padding-left: 10px;
+}
+
+#todo-input {
+	margin-left: 10px;
+}
+
+li {
+	margin-top: 10px;
+}
+
+span {
+	margin-left: 2rem;
+}
