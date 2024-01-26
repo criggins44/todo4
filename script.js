@@ -7,7 +7,8 @@ function addTodo(){
 	// assigns value for item entered in textbox
 
 	if (item ==="")
-		return (document.getElementById("list").innerHTML = "Insert a task");
+		(document.getElementById("list").innerHTML = "Insert a task");
+		return;
 // prompts user to enter a task
 
 	items.push({
